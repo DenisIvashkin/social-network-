@@ -22,12 +22,12 @@ const LoginPage = () => {
                     <h1>Login</h1>
 
                     <div className = 'input-box'>
-                        <input type = 'text' placeholder = 'Username'></input>
+                        <input type = 'text' placeholder = 'Username' required></input>
                         <i className = 'bx bxs-lock-alt'></i>
                     </div>
 
                     <div className = 'input-box'>
-                        <input type = 'text' placeholder = 'Password'></input>
+                        <input type = 'text' placeholder = 'Password' required></input>
                         <i className = 'bx bxs-lock-alt'></i>
                     </div>
 

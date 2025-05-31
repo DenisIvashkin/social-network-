@@ -1,18 +1,17 @@
-import React from 'react';
+import React, {FormEvent} from 'react';
 import './newsStyles.css'
+import {AuthContext} from "@/context/context";
+import {useAuth} from "@/hooks/useAuth";
+import Navbar from "@/pages/Navbar/Navbar";
+import {Link} from "react-router-dom";
 
 const NewsPage = () => {
+    let {isAuth, setAuth} = useAuth()
+
+
     return (
         <div>
-            <div className = 'navbar-wrapper'>
-                <div className = 'text-logo'>
-                    <p>SocialNetwork</p>
-                </div>
-                <div className = 'logout-btn'>
-                   <button><a href = '#'>Logout</a> </button>
-                </div>
-            </div>
-
+            <Navbar/>
             <div className = 'newsblock-wrapper'>
 
                 <div className = 'sidebar-wrapper'>
@@ -20,11 +19,13 @@ const NewsPage = () => {
                     <div className ='ne_pridumal'>
                         <p>А что сюда добавить - я не придумал...</p>
                     </div>
-                    <button type = 'submit' className = 'sidebar_btn2'>About</button>
+                    <button type = 'submit' className = 'sidebar_btn2'>
+                        <Link to='/about'>About</Link>
+                    </button>
                 </div>
             </div>
-
         </div>
+
     );
 };
 

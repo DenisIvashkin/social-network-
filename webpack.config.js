@@ -9,7 +9,10 @@ module.exports = {
         publicPath: '/'
     },
     resolve: {
-        extensions: ['.js', '.jsx', '.ts', '.tsx']
+        extensions: ['.js', '.jsx', '.ts', '.tsx'],
+        alias: {
+            '@': path.resolve(__dirname, './src'),
+        }
     },
     module: {
         rules: [
@@ -21,7 +24,11 @@ module.exports = {
             {
                 test: /\.css$/,
                 use: ['style-loader', 'css-loader']
-            }
+            },
+            {
+                test: /\.(jpe?g|png|gif)$/i,
+                type: 'asset/resource',
+            },
         ]
     },
     plugins: [

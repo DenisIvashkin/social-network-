@@ -1,9 +1,10 @@
 {
   "compilerOptions": {
+    "moduleResolution": "Node",
     "target": "ES6",
     "module": "ESNext",
-    "jsx": "react-jsx",
-    "types": ["react", "react-dom"],
+    "jsx": "react",
+    "types": ["react", "react-dom", "node", "webpack-env"],
     "strict": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
@@ -13,5 +14,5 @@
       "@/*": ["src/*"]
     }
   },
-  "include": ["src"]
+  "include": ["src"],
 }

@@ -1,0 +1,12 @@
+.CatsSlider {
+    margin-left: 500px;
+    margin-top: 500px;
+    height: 400px;
+    width: 400px;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+}
+
+.CatsSlider > img {
+    scroll-snap-align: center;
+}

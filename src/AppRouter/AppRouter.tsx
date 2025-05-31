@@ -1,13 +1,15 @@
 import React, {useContext} from 'react';
 import {AuthContext} from "../context/context";
-import {useAuth} from "../hooks/useAuth";
-import {BrowserRouter, Route, Router, Routes} from "react-router-dom";
-import {privateRoutes, publicRoutes} from "../router/router";
-import Loader from "../components/Loader";
+import {useAuth} from "@/hooks/useAuth";
+import {BrowserRouter, Route, Routes} from "react-router-dom";
+import {privateRoutes, publicRoutes} from "@/router/router";
+import Loader from "../components/Loader/Loader";
+import Navbar from "@/pages/Navbar/Navbar";
 
 interface RouteConfig {
     path: string;
     element: React.ReactNode;
+
 }
 
 
@@ -21,14 +23,18 @@ const AppRouter= () => {
     const routes = isAuth ? privateRoutes : publicRoutes;
 
     return (
+
+
         <BrowserRouter>
-            {routes.map((route) => (
-                <Route
-                    key={route.path}
-                    path={route.path}
-                    element={route.component}
-                />
-            ))}
+            <Routes>
+                {routes.map((route) => (
+                    <Route
+                        key={route.path}
+                        path={route.path}
+                        element={route.component}
+                    />
+                ))}
+            </Routes>
         </BrowserRouter>
     );
 };
