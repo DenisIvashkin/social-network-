@@ -1,0 +1,75 @@
+.post {
+    background: white;
+    width: 1000px;
+    margin: 20px auto;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 15px 15px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.post:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.post::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(to bottom, white, mediumslateblue);
+    transition: all 0.3s ease;
+}
+
+.post:hover::before {
+    width: 6px;
+}
+
+.post-content {
+    padding-left: 15px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.post-content strong {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: darkslateblue;
+    display: block;
+    margin-bottom: 12px;
+    line-height: 1.3;
+}
+
+.post-content div {
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    color: black;
+    line-height: 1.6;
+    margin-bottom: 8px;
+}
+
+/* Анимация появления */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.post {
+    animation: fadeIn 0.5s ease-out;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .post {
+        padding: 18px;
+    }
+
+    .post-content strong {
+        font-size: 1.2rem;
+    }
+}

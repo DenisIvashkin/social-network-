@@ -1,12 +1,19 @@
-.CatsSlider {
-    margin-left: 500px;
-    margin-top: 500px;
-    height: 400px;
-    width: 400px;
-    overflow-x: scroll;
-    scroll-snap-type: x mandatory;
+.catsphotos {
+    width: 800px;
+    margin: 0 auto;
+    padding: 20px; ;
+    border: 2px solid white;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 5px 4px rgba(0, 0, 0, 0.2);
+
 }
 
-.CatsSlider > img {
-    scroll-snap-align: center;
+.cats-text {
+    font-size: 30px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    color: white;
+    text-align: center;
 }
+

@@ -1,64 +1,11 @@
 .newsblock-wrapper {
     background: mediumslateblue;
-    height: 100vh;
-}
-
-.sidebar-wrapper {
-    position: fixed;
-    width: 320px;
     height: 100%;
-    border-right: 2px solid rgba(255, 255, 255,.2);
-    backdrop-filter: blur(10px);
-    display: flex; /* Добавляем flex-контейнер */
-    align-items: flex-start; /* Выравниваем по верху */
-    padding-top: 85px; /* Отступ сверху */
-    padding-left: 50px; /* Отступ слева от края экрана */
-    box-sizing: border-box; /* Учитываем padding в ширине */
-    flex-direction: column;
-}
-
-.sidebar_btn {
-    text-decoration: none;
-    width: 200px;
-    height: 45px;
-    background: #fff;
-    border: none;
-    border-radius: 40px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    cursor: pointer;
-    font-size: 16px;
-    color: #333;
-    transition: all 0.3s ease;
-    &:hover {
-        background: lightgray;
-    }
-}
-
-.ne_pridumal {
-    font-family: 'Poppins', sans-serif;
-    align-items: center;
-    justify-content:  center;
-    margin-top: 200px;
-    color: white;
+    padding-top: 80px;
+    padding-bottom: 20px;
 }
 
 
 
-.sidebar_btn2 {
-    text-decoration: none;
-    margin-top: 550px;
-    width: 200px;
-    height: 25px;
-    background: #fff;
-    border: none;
-    border-radius: 20px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    cursor: pointer;
-    font-size: 16px;
-    color: #333;
-    transition: all 0.3s ease;
-    &:hover {
-        background: lightgray;
-    }
-}
+
 

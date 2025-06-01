@@ -4,7 +4,7 @@ import {useAuth} from "@/hooks/useAuth";
 import {BrowserRouter, Route, Routes} from "react-router-dom";
 import {privateRoutes, publicRoutes} from "@/router/router";
 import Loader from "../components/Loader/Loader";
-import Navbar from "@/pages/Navbar/Navbar";
+import Navbar from "@/components/Navbar/Navbar";
 
 interface RouteConfig {
     path: string;
