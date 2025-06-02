@@ -3,7 +3,7 @@ import './PostForm.css'
 
 
 export interface Post {
-    id?: number;
+    id: number;
     title: string;
     body: string;
 }
@@ -26,6 +26,7 @@ const PostForm: React.FC<NewsBlockFormProps> = ({ create, onClose }) => {
         };
         create(newPost);
         onClose()
+
         console.log('Создан новый пост:', newPost);
         setTitle('')
         setBody('')

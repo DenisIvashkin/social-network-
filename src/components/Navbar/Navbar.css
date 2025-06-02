@@ -25,7 +25,7 @@
 
 .navbar-links {
     position: absolute;
-    left: 50%;
+    margin-left: 48vw;
     transform: translateX(-50%);
     display: flex;
     gap: 20px;

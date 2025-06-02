@@ -1,5 +1,6 @@
 .post {
     background: white;
+    box-sizing: border-box;
     width: 1000px;
     margin: 20px auto;
     padding: 30px;
@@ -8,6 +9,10 @@
     transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
+    max-width: 100%;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: pre-line;
 }
 
 .post:hover {
@@ -71,5 +76,28 @@
 
     .post-content strong {
         font-size: 1.2rem;
+    }
+}
+
+.remove-btn {
+    font-family: 'Poppins', sans-serif;
+    margin-left: 730px;
+    width: 200px;
+    height: 45px;
+    background: mediumslateblue;
+    border: none;
+    border-radius: 40px;
+    box-shadow: 0 10px 10px rgba(0,0,0,0.1);
+    cursor: pointer;
+    font-size: 18px;
+    color: white;
+    text-decoration: none !important;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center ;
+    justify-content: center;
+    &:hover {
+        background: darkslateblue;
+        text-decoration: none !important;
     }
 }

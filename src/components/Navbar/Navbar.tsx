@@ -5,24 +5,19 @@ import {Link} from "react-router-dom";
 import Modal from "@/components/Modal/Modal";
 import PostForm, {Post} from "@/components/PostForm/PostForm";
 
+interface NavbarProps {
+    onOpenModal: () => void;
+}
 
-
-const Navbar = () => {
-
+const Navbar = ({onOpenModal}: NavbarProps) => {
     const {isAuth, setAuth} = useAuth();
     const [post, setPost] = React.useState<Post[]>([]);
-    const [isVisible, setVisible] = React.useState<boolean>(false);
 
-
-    const createPost = (newPost: Post) => {
-        setPost([newPost, ...post]);
-    };
 
     const logout = () => {
         setAuth(false);
         localStorage.setItem('auth', 'false');
     }
-
 
     return (
         <div>
@@ -38,7 +33,7 @@ const Navbar = () => {
                      </div>
 
                     <div>
-                        <button type = 'submit' className = 'post_btn' onClick = {() => setVisible(true)} >Share your post</button>
+                        <button type = 'submit' className = 'post_btn' onClick={onOpenModal} >Share your post</button>
                     </div>
 
                     <div className = 'link-post-btn'>
@@ -53,14 +48,6 @@ const Navbar = () => {
                 </div>
 
             </div>
-            {isVisible && (
-                <Modal onClose={() => setVisible(false)} visible={isVisible}>
-                    <PostForm
-                        create={createPost}
-                        onClose={() => setVisible(false)}
-                    />
-                </Modal>
-            )}
         </div>
     );
 };
